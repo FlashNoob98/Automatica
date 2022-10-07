@@ -43,3 +43,9 @@ systf2 = ss2tf(A,B,C,D);
 
 step(systf);
 %step(systf2);
+
+
+%% Num e den
+num = [4 0];
+den = [];
+
