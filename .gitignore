@@ -275,5 +275,9 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
-# Matlab autosave file
+# Matlab file
 *.asv
+*.slxc
+*cache.xml
+*Cache.mat
+varInfo.mat
