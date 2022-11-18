@@ -1,16 +1,23 @@
 close all; clear;clc;
 syms s;
 
-K = linspace(0.01,0.2,7);
+%K = linspace(0.001,0.02,7);
+K=1;
 
-num = sym2poly(-125*s*(s^2-0.2*s+0.01)*(s+20));
-den = sym2poly((s^2+2*s+1)*(s^2+4*s+25));
+
+num = sym2poly(100+s*0);
+den = sym2poly(s*(s+1)^2);
+
 sys1 = tf(num,den);
 
 figure();
 bode(sys1);
 figure();
 nyquist(sys1);
+
+m = margin(sys1)
+
+
 
 figure();
 hold on;
