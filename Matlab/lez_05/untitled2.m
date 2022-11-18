@@ -3,8 +3,8 @@ syms s;
 
 K = linspace(0.01,0.2,7);
 
-num = sym2poly(-0.5*(s-100));
-den = sym2poly(s^2+3.2*s+4);
+num = sym2poly(s*100+s*0);
+den = sym2poly((s+1)^2);
 
 sys1 = tf(num,den);
 
@@ -15,16 +15,17 @@ figure();
 nyquist(sys1);
 
 figure();
-bode_as(sys1);
+%bode_as(sys1);
 
+step(sys1)
 
 figure();
 hold on;
 grid on;
 
-for i=1:length(K)
-out = sim('instabile');
-plot(out.y);
-end
+% for i=1:length(K)
+% out = sim('instabile');
+% plot(out.y);
+% end
 
 legend("K = "+K);
