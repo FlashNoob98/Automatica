@@ -281,3 +281,9 @@ TSWLatexianTemp*
 *cache.xml
 *Cache.mat
 varInfo.mat
+
+#Latex file
+*.pdf
+*.aux
+
+
